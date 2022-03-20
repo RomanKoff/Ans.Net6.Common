@@ -1,0 +1,82 @@
+﻿using Newtonsoft.Json;
+using System.Text;
+
+namespace Ans.Net6.Common
+{
+
+	public class ApiClient
+		: IDisposable
+	{
+
+		public HttpClient HttpClient { get; private set; }
+
+
+		public ApiClient()
+		{
+			this.HttpClient = new HttpClient();
+		}
+
+
+		public HttpContent GetHttpContent(
+			string json)
+		{
+			return new StringContent(
+				json, Encoding.UTF8, "application/json");
+		}
+
+
+		public HttpContent GetHttpContent(
+			object model)
+		{
+			string json = JsonConvert.SerializeObject(
+				model, Formatting.None,
+				new JsonSerializerSettings
+				{
+					NullValueHandling = NullValueHandling.Ignore
+				});
+			return GetHttpContent(json);
+		}
+
+
+		public async Task<HttpResponseMessage> GetAsync(
+			string url)
+		{
+			return await HttpClient
+				.GetAsync(url)
+				.ConfigureAwait(false);
+		}
+
+
+		public async Task<HttpResponseMessage> PostAsync(
+			string url,
+			HttpContent content)
+		{
+			return await HttpClient
+				.PostAsync(url, content)
+				.ConfigureAwait(false);
+		}
+
+
+
+		// Dispose
+
+		protected virtual void Dispose(
+			bool disposing)
+		{
+			if (!disposedValue)
+			{
+				if (disposing)
+					this.HttpClient.Dispose();
+				disposedValue = true;
+			}
+		}
+		public void Dispose()
+		{
+			Dispose(disposing: true);
+			GC.SuppressFinalize(this);
+		}
+		private bool disposedValue;
+
+	}
+
+}

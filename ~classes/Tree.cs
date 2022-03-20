@@ -1,0 +1,118 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace Ans.Net6.Common
+{
+
+    public interface ITreeElement
+    {
+        int Id { get; set; }
+        int? MasterPtr { get; set; }
+    }
+
+
+
+    public interface ITreeItem<T>
+        : ITreeElement
+        where T : ITreeElement
+    {
+        List<ITreeItem<T>> Masters { get; set; }
+        List<ITreeItem<T>> Slaves { get; set; }
+    }
+
+
+
+    public interface ITreeProvider<TElement, TItem>
+        : ITreeProvider<TItem>
+        where TElement : ITreeElement
+        where TItem : ITreeItem<TElement>
+    {
+    }
+
+
+
+    public abstract class __TreeProvider_Proto<TElement, TItem>
+        : ITreeProvider<TElement, TItem>
+        where TElement : ITreeElement, new()
+        where TItem : ITreeItem<TElement>, new()
+    {
+
+        private int _newId;
+
+        public List<TItem> All { get; set; }
+        public TItem Root { get; set; }
+
+
+        public virtual TItem GetItem(
+            int id)
+        {
+            return All.FirstOrDefault(
+                x => x.Id == id);
+        }
+
+
+        public virtual TItem GetItem(string name)
+        {
+            throw new System.NotImplementedException();
+        }
+
+
+        public void ItemRelease(TItem item)
+        {
+            throw new System.NotImplementedException();
+        }
+
+
+        public void Refresh()
+        {
+            throw new System.NotImplementedException();
+        }
+
+
+        public virtual void SetTree(
+            TItem root,
+            bool genIds)
+        {
+            this.Root = root;
+            this.All = new List<TItem>();
+            _newId = (genIds) ? 1 : 0;
+            _scanTree(root);
+        }
+
+
+        public virtual void SetList(
+            ICollection<TItem> items)
+        {
+            throw new System.NotImplementedException();
+        }
+
+
+        public virtual void ItemRelease(
+            ITreeItem<TElement> item)
+        {
+        }
+
+
+        // privates
+
+        private void _scanTree(
+            TItem master)
+        {
+            if (_newId > 0)
+                master.Id = _newId++;
+            this.All.Add(master);
+            if (master.Slaves != null)
+                foreach (var slave1 in master.Slaves)
+                {
+                    slave1.MasterPtr = master.Id;
+                    slave1.Masters = new List<ITreeItem<TElement>> { master };
+                    if (master.Masters != null && master.Masters.Any())
+                        slave1.Masters.AddRange(master.Masters);
+                    _scanTree((TItem)slave1);
+                    ItemRelease(slave1);
+                }
+        }
+
+    }
+
+}
