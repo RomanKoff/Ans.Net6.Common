@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Ans.Net6.Common
+﻿namespace Ans.Net6.Common
 {
 
-	// var menu = new ConsoleMenu("Title");
-	// menu.Add(System.ConsoleKey.D1, "Action 1", Action1);
-	// menu.Release();
+	public class ConsoleMenuItem
+	{
+		public ConsoleKey Key { get; private set; }
+		public string Title { get; private set; }
+		public Action Action { get; private set; }
+
+		public ConsoleMenuItem(
+			ConsoleKey key,
+			string title,
+			Action action)
+		{
+			this.Key = key;
+			this.Title = title;
+			this.Action = action;
+		}
+	}
+
+
 
 	public class ConsoleMenu
 	{
@@ -28,17 +40,9 @@ namespace Ans.Net6.Common
 			this.Items.Add(item);
 		}
 
-		public void Add(
-			ConsoleKey key,
-			string title,
-			Action method)
-		{
-			Add(new ConsoleMenuItem(key, title, method));
-		}
-
 		public void Release()
 		{
-			bool pressEscape;
+			bool pressEscape = false;
 			do
 			{
 				Console.WriteLine();
@@ -56,7 +60,7 @@ namespace Ans.Net6.Common
 						if (item.Key == keyInfo.Key)
 						{
 							this.UseExit = true;
-							item.Method();
+							item.Action();
 						}
 					pressEscape = keyInfo.Key == ConsoleKey.Escape;
 				} while (!UseExit && !pressEscape);

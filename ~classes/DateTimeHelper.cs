@@ -1,29 +1,54 @@
-﻿using System;
-
-namespace Ans.Net6.Common
+﻿namespace Ans.Net6.Common
 {
 
 	public class DateTimeHelper
 	{
 
+		/// <summary>
+		/// текущая дата и время
+		/// </summary>
 		public DateTime Current { get; private set; }
+
+		/// <summary>
+		/// дата начала текущего года
+		/// </summary>
 		public DateTime CurrentYearBegin { get; private set; }
-		public DateTime Yesterday { get; private set; }
-		public DateTime Today { get; private set; }
-		public DateTime Tomorrow { get; private set; }
-		public DateTime TomorrowAfter { get; private set; }
+
+		/// <summary>
+		/// дата начала следующего года
+		/// </summary>
 		public DateTime NextYearBegin { get; private set; }
+
+		/// <summary>
+		/// дата сегодня
+		/// </summary>
+		public DateTime Today { get; private set; }
+
+		/// <summary>
+		/// дата вчера
+		/// </summary>
+		public DateTime Yesterday { get; private set; }
+
+		/// <summary>
+		/// дата завтра
+		/// </summary>
+		public DateTime Tomorrow { get; private set; }
+
+		/// <summary>
+		/// дата послезавтра
+		/// </summary>
+		public DateTime TomorrowAfter { get; private set; }
 
 
 		public DateTimeHelper()
 		{
 			this.Current = DateTime.Now;
-			this.Today = Current.GetDateOnly();
-			this.TomorrowAfter = Today.AddDays(2);
-			this.Tomorrow = Today.AddDays(1);
-			this.Yesterday = Today.AddDays(-1);
 			this.CurrentYearBegin = new DateTime(Current.Year, 1, 1);
-			this.NextYearBegin = CurrentYearBegin.AddYears(1);
+			this.NextYearBegin = CurrentYearBegin.AddYears(1); 
+			this.Today = Current.GetDateOnly();
+			this.Yesterday = Today.AddDays(-1);
+			this.Tomorrow = Today.AddDays(1);
+			this.TomorrowAfter = Today.AddDays(2);			
 		}
 
 
@@ -122,11 +147,7 @@ namespace Ans.Net6.Common
 					: date1.ToString(_Res.Format_DateRange_Full);
 			DateTime d2 = date2.Value;
 			if (date1 > d2)
-			{
-				var temp1 = date1;
-				date1 = d2;
-				d2 = temp1;
-			}
+				(date1, d2) = (d2, date1);
 			if (date1.Year != d2.Year)
 			{
 				// разные года
