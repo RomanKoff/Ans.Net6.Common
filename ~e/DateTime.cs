@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Ans.Net6.Common
+﻿namespace Ans.Net6.Common
 {
 
 	public static partial class _e
@@ -9,6 +7,10 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Сравнивает значения даты и времени с точностью minutesDiff
 		/// </summary>
+		/// <param name="datetime1"></param>
+		/// <param name="datetime2"></param>
+		/// <param name="minutesDiff"></param>
+		/// <returns></returns>
 		public static bool IsEqual(
 			this DateTime datetime1,
 			DateTime datetime2,
@@ -21,6 +23,8 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Определяет наличие данных о времени
 		/// </summary>
+		/// <param name="datetime"></param>
+		/// <returns></returns>
 		public static bool HasTime(
 			this DateTime datetime)
 		{
@@ -28,6 +32,11 @@ namespace Ans.Net6.Common
 		}
 
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="datetime"></param>
+		/// <returns></returns>
 		public static DateTime GetDateOnly(
 			this DateTime datetime)
 		{
@@ -36,9 +45,10 @@ namespace Ans.Net6.Common
 
 
 		/// <summary>
-		/// Возвращает значение даты в виде строки
-		/// в безопасном формате (yyyy-0MM-dd)
+		/// Возвращает значение даты в виде строки в безопасном формате (yyyy-0MM-dd)
 		/// </summary>
+		/// <param name="datetime"></param>
+		/// <returns></returns>
 		public static string GetSafeDate(
 			this DateTime datetime)
 		{
@@ -48,9 +58,10 @@ namespace Ans.Net6.Common
 
 
 		/// <summary>
-		/// Возвращает значение даты и времени в виде строки
-		/// в безопасном формате (yyyy-0MM-dd HH:mmmm:ss)
+		/// Возвращает значение даты и времени в виде строки в безопасном формате (yyyy-0MM-dd HH:mmmm:ss)
 		/// </summary>
+		/// <param name="datetime"></param>
+		/// <returns></returns>
 		public static string GetSafeDateTime(
 			this DateTime datetime)
 		{
@@ -60,10 +71,10 @@ namespace Ans.Net6.Common
 
 
 		/// <summary>
-		/// Возвращает значение даты и времени в виде строки
-		/// в безопасном формате (yyyy-0MM-dd_HH:mmmm:ss)
-		/// для именования файлов
+		/// Возвращает значение даты и времени в виде строки в безопасном формате (yyyy-0MM-dd_HH:mmmm:ss) для именования файлов
 		/// </summary>
+		/// <param name="datetime"></param>
+		/// <returns></returns>
 		public static string GetSafeDateTimeForFile(
 			this DateTime datetime)
 		{
@@ -73,10 +84,10 @@ namespace Ans.Net6.Common
 
 
 		/// <summary>
-		/// Возвращает значение даты и времени в виде строки
-		/// в безопасном формате (yyyy0MMddHHmmmmss)
-		/// минимальной длины
+		/// Возвращает значение даты и времени в виде строки в безопасном формате (yyyy0MMddHHmmmmss) минимальной длины
 		/// </summary>
+		/// <param name="datetime"></param>
+		/// <returns></returns>
 		public static string GetSafeDateTimeForMin(
 			this DateTime datetime)
 		{

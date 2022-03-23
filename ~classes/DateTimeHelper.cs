@@ -1,45 +1,51 @@
 ﻿namespace Ans.Net6.Common
 {
 
+	/// <summary>
+	/// Хелпер даты и времени
+	/// </summary>
 	public class DateTimeHelper
 	{
 
 		/// <summary>
-		/// текущая дата и время
+		/// Текущая дата и время
 		/// </summary>
 		public DateTime Current { get; private set; }
 
 		/// <summary>
-		/// дата начала текущего года
+		/// Дата начала текущего года
 		/// </summary>
 		public DateTime CurrentYearBegin { get; private set; }
 
 		/// <summary>
-		/// дата начала следующего года
+		/// Дата начала следующего года
 		/// </summary>
 		public DateTime NextYearBegin { get; private set; }
 
 		/// <summary>
-		/// дата сегодня
+		/// Дата сегодня
 		/// </summary>
 		public DateTime Today { get; private set; }
 
 		/// <summary>
-		/// дата вчера
+		/// Дата вчера
 		/// </summary>
 		public DateTime Yesterday { get; private set; }
 
 		/// <summary>
-		/// дата завтра
+		/// Дата завтра
 		/// </summary>
 		public DateTime Tomorrow { get; private set; }
 
 		/// <summary>
-		/// дата послезавтра
+		/// Дата послезавтра
 		/// </summary>
 		public DateTime TomorrowAfter { get; private set; }
 
 
+		/// <summary>
+		/// 
+		/// </summary>
 		public DateTimeHelper()
 		{
 			this.Current = DateTime.Now;
@@ -69,6 +75,9 @@
 		///	- было в прошлые годы
 		///		d MMMM yyyy г.[ в H:mmmm] / MMMM d, yyyy[ at h:mmmm]
 		/// </summary>
+		/// <param name="datetime"></param>
+		/// <param name="hasTime"></param>
+		/// <param name="allowYesterdayTodayTomorrow"></param>
 		public string GetPassed(
 			DateTime datetime,
 			bool hasTime,

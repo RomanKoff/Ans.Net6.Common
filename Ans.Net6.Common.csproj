@@ -5,9 +5,11 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
 
-		<VersionPrefix>1.0.0</VersionPrefix>
-		<Copyright>Roman Koff</Copyright>
-		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+		<VersionPrefix>1.0.1</VersionPrefix>
+		<Authors>Roman Koff</Authors>
+		<Copyright>$(Authors)</Copyright>
+		<RepositoryUrl>https://github.com/RomanKoff/Ans.Net6.Common</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 
 	<ItemGroup>

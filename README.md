@@ -1,5 +1,50 @@
 ﻿# Ans.Net6.Common
 
+
+## Extensions 
+
+```csharp
+// string
+string TrimEnd(this string source, string trimString)
+string GetFirstUpper(this string source, bool forcedToLower)
+string GetFirstLower(this string source, bool forcedToUpper)
+string GetStartWithACapital(this string source, CultureInfo cultureInfo)
+string GetStartWithACapital(this string source)
+string GetScreening(this string source, 	string mask)
+string GetScreeningW(this string source, string mask)
+string GetReScreening(this string source, string mask)
+string GetLeft(this string source, char find)
+string GetLeft(this string source, string find)
+string GetLeft(this string source, int count)
+string GetRight(this string source, char find)
+string GetRight(this string source, string find)
+string GetRight(this string source, int count)
+string GetBackTo(this string source, char find, int skip = 0)
+string GetCrop(this string source, int startIndex, int length, string beginCropMask, string endCropMask)
+string GetSafeText(this string source)
+string GetTag(this string source, string before, string after, StringComparison comparisonType = StringComparison.InvariantCulture)
+string GetTagAndCut(this string source, string before, string after, StringComparison comparisonType = StringComparison.InvariantCulture)
+string GetReplaceRecursively(this string source, string oldText, string newText)
+string GetReplaceSpecChars(this string source)
+```
+
+
+
+## Supports
+
+```csharp
+// SuppString
+string SuppString.Join2(string text1, string text2, string template)
+string SuppString.Join(string[] data, string separator, string templateItem, string templateResult)
+string SuppString.Join(string data, string dataSeparator, string itemsSeparator, string templateItem, string templateResult)
+KeyValuePair<string, string> SuppString.GetPair(string definition, string separator)
+KeyValuePair<string, string> SuppString.GetPair(string definition)
+
+// SuppRegex
+string SuppRegex.ParamEncode(	string source)
+```
+
+
 ## Classes
 
 
@@ -44,7 +89,7 @@ string GetPassed(
 ```
 Возвращает дату (и время) события (для блога)
 
-| значение | ru | en |
+| значение | формат ru | формат en |
 |--|--|--|
 | будет в будущих годах | `d MMMM yyyy г.[ в H:mmmm]` | `MMMM d, yyyy[ at h:mmmm]` |
 | будет в этом году | `d MMMM[ в H:mmmm]` | `MMMM d[ at h:mmmm]` |

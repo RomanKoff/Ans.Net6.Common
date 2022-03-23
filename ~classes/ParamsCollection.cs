@@ -7,7 +7,6 @@ namespace Ans.Net6.Common
 	public class ParamsCollection
 		: Dictionary<string, string>
 	{
-
 		protected ParamsCollection(
 			SerializationInfo info,
 			StreamingContext context)
@@ -15,12 +14,10 @@ namespace Ans.Net6.Common
 		{
 		}
 
-
 		public ParamsCollection()
 			: base()
 		{
 		}
-
 
 		public ParamsCollection(
 			int capacity,
@@ -28,7 +25,6 @@ namespace Ans.Net6.Common
 			: base(capacity, comparer)
 		{
 		}
-
 
 		public void SetParam(
 			string name,
@@ -40,14 +36,12 @@ namespace Ans.Net6.Common
 				this.Add(name, value);
 		}
 
-
 		public void SetParamInt(
 			string name,
 			int value)
 		{
 			SetParam(name, value.ToString());
 		}
-
 
 		public void SetParamLong(
 			string name,
@@ -56,14 +50,12 @@ namespace Ans.Net6.Common
 			SetParam(name, value.ToString());
 		}
 
-
 		public void SetParamDouble(
 			string name,
 			double value)
 		{
 			SetParam(name, value.ToString());
 		}
-
 
 		public void SetParamFloat(
 			string name,
@@ -72,7 +64,6 @@ namespace Ans.Net6.Common
 			SetParam(name, value.ToString());
 		}
 
-
 		public void SetParamDecimal(
 			string name,
 			decimal value)
@@ -80,14 +71,12 @@ namespace Ans.Net6.Common
 			SetParam(name, value.ToString());
 		}
 
-
 		public void SetParamDataTime(
 			string name,
 			DateTime value)
 		{
 			SetParam(name, value.ToString());
 		}
-
 	}
 
 }

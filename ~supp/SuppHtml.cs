@@ -4,12 +4,16 @@ namespace Ans.Net6.Common
 {
 
 	/// <summary>
-	/// string GetEscapeHtml(string source)
-	/// void ReplaceHtmlMacros(StringBuilder sb)
+	/// 
 	/// </summary>
 	public static class SuppHtml
 	{
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="source"></param>
+		/// <returns></returns>
 		public static string GetEscapeHtml(
 			string source)
 		{
@@ -20,6 +24,10 @@ namespace Ans.Net6.Common
 		}
 
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sb"></param>
 		public static void ReplaceHtmlMacros(
 			StringBuilder sb)
 		{
