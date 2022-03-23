@@ -1,4 +1,4 @@
-# Ans.Net6.Common
+п»ї# Ans.Net6.Common
 
 ## Classes
 
@@ -25,13 +25,13 @@ DateTimeHelper()
 Properties:
 
 ```csharp
-DateTime Current { get; } // текущая дата и время
-DateTime CurrentYearBegin { get; } // дата начала текущего года
-DateTime NextYearBegin { get; } // дата начала следующего года
-DateTime Today { get; } // дата сегодня
-DateTime Yesterday { get; } // дата вчера
-DateTime Tomorrow { get; } // дата завтра
-DateTime TomorrowAfter { get; } // дата послезавтра
+DateTime Current { get; } // С‚РµРєСѓС‰Р°СЏ РґР°С‚Р° Рё РІСЂРµРјСЏ
+DateTime CurrentYearBegin { get; } // РґР°С‚Р° РЅР°С‡Р°Р»Р° С‚РµРєСѓС‰РµРіРѕ РіРѕРґР°
+DateTime NextYearBegin { get; } // РґР°С‚Р° РЅР°С‡Р°Р»Р° СЃР»РµРґСѓСЋС‰РµРіРѕ РіРѕРґР°
+DateTime Today { get; } // РґР°С‚Р° СЃРµРіРѕРґРЅСЏ
+DateTime Yesterday { get; } // РґР°С‚Р° РІС‡РµСЂР°
+DateTime Tomorrow { get; } // РґР°С‚Р° Р·Р°РІС‚СЂР°
+DateTime TomorrowAfter { get; } // РґР°С‚Р° РїРѕСЃР»РµР·Р°РІС‚СЂР°
 ```
 
 Methods:
@@ -42,16 +42,14 @@ string GetPassed(
 	bool hasTime,
 	bool allowYesterdayTodayTomorrow = true)
 ```
-Возвращает дату (и время) события (для блога)
+Р’РѕР·РІСЂР°С‰Р°РµС‚ РґР°С‚Сѓ (Рё РІСЂРµРјСЏ) СЃРѕР±С‹С‚РёСЏ (РґР»СЏ Р±Р»РѕРіР°)
 
+| Р·РЅР°С‡РµРЅРёРµ | ru | en |
 |--|--|--|
-| значение | ru | en |
-|--|--|--|
-| будет в будущих годах | `d MMMM yyyy г.[ в H:mmmm]` | `MMMM d, yyyy[ at h:mmmm]` |
-| будет в этом году | `d MMMM[ в H:mmmm]` | `MMMM d[ at h:mmmm]` |
-| завтра | `завтра[ в H:mmmm]` | `Tomorrow[ at h:mmmm]` |
-| сегодня | `сегодня[ в H:mmmm]` | `Today[ at h:mmmm]` |
-| вчера | `вчера[ в H:mmmm]` | `Yesterday[ в H:mmmm]` |
-| было в этом году | `d MMMM[ в H:mmmm]` | `MMMM d[ at h:mmmm]` |
-| было в прошлые годы | `d MMMM yyyy г.[ в H:mmmm]` | `MMMM d, yyyy[ at h:mmmm]` |
-|--|--|--|
+| Р±СѓРґРµС‚ РІ Р±СѓРґСѓС‰РёС… РіРѕРґР°С… | `d MMMM yyyy Рі.[ РІ H:mmmm]` | `MMMM d, yyyy[ at h:mmmm]` |
+| Р±СѓРґРµС‚ РІ СЌС‚РѕРј РіРѕРґСѓ | `d MMMM[ РІ H:mmmm]` | `MMMM d[ at h:mmmm]` |
+| Р·Р°РІС‚СЂР° | `Р·Р°РІС‚СЂР°[ РІ H:mmmm]` | `Tomorrow[ at h:mmmm]` |
+| СЃРµРіРѕРґРЅСЏ | `СЃРµРіРѕРґРЅСЏ[ РІ H:mmmm]` | `Today[ at h:mmmm]` |
+| РІС‡РµСЂР° | `РІС‡РµСЂР°[ РІ H:mmmm]` | `Yesterday[ РІ H:mmmm]` |
+| Р±С‹Р»Рѕ РІ СЌС‚РѕРј РіРѕРґСѓ | `d MMMM[ РІ H:mmmm]` | `MMMM d[ at h:mmmm]` |
+| Р±С‹Р»Рѕ РІ РїСЂРѕС€Р»С‹Рµ РіРѕРґС‹ | `d MMMM yyyy Рі.[ РІ H:mmmm]` | `MMMM d, yyyy[ at h:mmmm]` |
