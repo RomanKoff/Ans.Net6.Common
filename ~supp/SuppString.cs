@@ -12,36 +12,16 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// 
 		/// </summary>
-		/// <param name="text1"></param>
-		/// <param name="text2"></param>
-		/// <param name="template"></param>
-		/// <returns></returns>
-		public static string Join2(
-			string text1,
-			string text2,
-			string template)
-		{
-			if (string.IsNullOrEmpty(text1))
-				return text2;
-			if (string.IsNullOrEmpty(text2))
-				return text1;
-			return string.Format(template, text1, text2);
-		}
-
-
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="data"></param>
-		/// <param name="itemsSeparator"></param>
-		/// <param name="templateItem"></param>
 		/// <param name="templateResult"></param>
+		/// <param name="templateItem"></param>
+		/// <param name="itemsSeparator"></param>
+		/// <param name="data"></param>
 		/// <returns></returns>
 		public static string Join(
-			string[] data,
-			string separator,
+			string templateResult,
 			string templateItem,
-			string templateResult)
+			string itemsSeparator,
+			params string[] data)
 		{
 			var sb = new StringBuilder();
 			bool f1 = true;
@@ -52,7 +32,7 @@ namespace Ans.Net6.Common
 					if (f1)
 						f1 = false;
 					else
-						sb.Append(separator);
+						sb.Append(itemsSeparator);
 					sb.Append(f2 ? s1 : string.Format(templateItem, s1));
 				}
 			string s2 = sb.ToString();
@@ -66,22 +46,22 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// 
 		/// </summary>
+		/// <param name="templateResult"></param>
+		/// <param name="templateItem"></param>
+		/// <param name="itemsSeparator"></param>
 		/// <param name="data"></param>
 		/// <param name="dataSeparator"></param>
-		/// <param name="itemsSeparator"></param>
-		/// <param name="templateItem"></param>
-		/// <param name="templateResult"></param>
 		/// <returns></returns>
 		public static string Join(
-			string data,
-			string dataSeparator,
-			string itemsSeparator,
+			string templateResult,
 			string templateItem,
-			string templateResult)
+			string itemsSeparator,
+			string data,
+			string dataSeparator)
 		{
 			return Join(
-				data.Split(dataSeparator),
-				itemsSeparator, templateItem, templateResult);
+				templateResult, templateItem, itemsSeparator,
+				data.Split(dataSeparator));
 		}
 
 

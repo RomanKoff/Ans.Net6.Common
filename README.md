@@ -34,9 +34,8 @@ string GetReplaceSpecChars(this string source)
 
 ```csharp
 // SuppString
-string SuppString.Join2(string text1, string text2, string template)
-string SuppString.Join(string[] data, string separator, string templateItem, string templateResult)
-string SuppString.Join(string data, string dataSeparator, string itemsSeparator, string templateItem, string templateResult)
+string SuppString.Join(string templateResult, string templateItem, string itemsSeparator, params string[] data)
+string SuppString.Join(string templateResult, string templateItem, string itemsSeparator, string data, string dataSeparator)
 KeyValuePair<string, string> SuppString.GetPair(string definition, string separator)
 KeyValuePair<string, string> SuppString.GetPair(string definition)
 
