@@ -1,8 +1,37 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 
 namespace Ans.Net6.Common
 {
+
+	// string GetSqlIdentityInsertOn(string table)
+	// string GetSqlIdentityInsertOff(string table)
+	// string GetValue(int value)
+	// string GetValue(int? value)
+	// string GetValue(long value)
+	// string GetValue(long? value)
+	// string GetValue(double value)
+	// string GetValue(double? value)
+	// string GetValue(float value)
+	// string GetValue(float? value)
+	// string GetValue(decimal value)
+	// string GetValue(decimal? value)
+	// string GetValue(string value)
+	// string GetValue(bool value)
+	// string GetValue(DateTime value)
+	// string GetValue(DateTime? value)
+	// string GetValueAsIntOrNULL(object value)
+	// string GetValueAsIntOr0(object value)
+	// string GetValueAsLongOrNULL(object value)
+	// string GetValueAsLongOr0(object value)
+	// string GetValueAsDoubleOrNULL(object value)
+	// string GetValueAsDoubleOr0(object value)
+	// string GetValueAsFloatOrNULL(object value)
+	// string GetValueAsFloatOr0(object value)
+	// string GetValueAsDecimalOrNULL(object value)
+	// string GetValueAsDecimalOr0(object value)
+	// string GetValueAsString(string value)
+	// string GetValueAsBool(object value)
+	// string GetValueAsDateTime(object value)
 
 	public static class SuppSql
 	{

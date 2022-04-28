@@ -3,20 +3,14 @@
 namespace Ans.Net6.Common
 {
 
-	/// <summary>
-	/// 
-	/// </summary>
+	// string Join(string templateResult, string templateItem, string itemsSeparator, params string[] data)
+	// string Join(string templateResult, string templateItem, string itemsSeparator, string data, string dataSeparator)
+	// KeyValuePair<string, string> GetPair(string definition, string separator)
+	// KeyValuePair<string, string> GetPair(string definition)
+
 	public static class SuppString
 	{
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="templateResult"></param>
-		/// <param name="templateItem"></param>
-		/// <param name="itemsSeparator"></param>
-		/// <param name="data"></param>
-		/// <returns></returns>
 		public static string Join(
 			string templateResult,
 			string templateItem,
@@ -43,15 +37,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="templateResult"></param>
-		/// <param name="templateItem"></param>
-		/// <param name="itemsSeparator"></param>
-		/// <param name="data"></param>
-		/// <param name="dataSeparator"></param>
-		/// <returns></returns>
 		public static string Join(
 			string templateResult,
 			string templateItem,
@@ -65,12 +50,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="definition"></param>
-		/// <param name="separator"></param>
-		/// <returns></returns>
 		public static KeyValuePair<string, string> GetPair(
 			string definition,
 			string separator)
@@ -86,11 +65,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="definition"></param>
-		/// <returns></returns>
 		public static KeyValuePair<string, string> GetPair(
 			string definition)
 		{

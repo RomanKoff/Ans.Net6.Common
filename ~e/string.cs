@@ -5,15 +5,31 @@ using System.Text.RegularExpressions;
 namespace Ans.Net6.Common
 {
 
+	// string TrimEnd(this string source, string trimString)
+	// string GetFirstUpper(this string source, bool forcedToLower)
+	// string GetFirstLower(this string source, bool forcedToUpper)
+	// string GetStartWithACapital(this string source, CultureInfo cultureInfo)
+	// string GetStartWithACapital(this string source)
+	// string GetScreening(this string source, string mask)
+	// string GetScreeningW(this string source, string mask)
+	// string GetReScreening(this string source, string mask)
+	// string GetLeft(this string source, char find)
+	// string GetLeft(this string source, string find)
+	// string GetLeft(this string source, int count)
+	// string GetRight(this string source, char find)
+	// string GetRight(this string source, string find)
+	// string GetRight(this string source, int count)
+	// string GetBackTo(this string source, char find, int skip = 0)
+	// string GetCrop(this string source, int startIndex, int length, string beginCropMask, string endCropMask)
+	// string GetSafeText(this string source)
+	// string GetTag(this string source, string before, string after, StringComparison comparisonType = StringComparison.InvariantCulture)
+	// string GetTagAndCut(this string source, string before, string after, StringComparison comparisonType = StringComparison.InvariantCulture)
+	// string GetReplaceRecursively(this string source, string oldText, string newText)
+	// string GetReplaceSpecChars(this string source)
+
 	public static partial class _e
 	{
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="trimString"></param>
-		/// <returns></returns>
 		public static string TrimEnd(
 			this string source,
 			string trimString)
@@ -23,12 +39,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="forcedToLower"></param>
-		/// <returns></returns>
 		public static string GetFirstUpper(
 			this string source,
 			bool forcedToLower)
@@ -45,12 +55,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="forcedToUpper"></param>
-		/// <returns></returns>
 		public static string GetFirstLower(
 			this string source,
 			bool forcedToUpper)
@@ -67,12 +71,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="cultureInfo"></param>
-		/// <returns></returns>
 		public static string GetStartWithACapital(
 			this string source,
 			CultureInfo cultureInfo)
@@ -83,11 +81,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="source"></param>
-		/// <returns></returns>
 		public static string GetStartWithACapital(
 			this string source)
 		{
@@ -96,12 +89,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="mask"></param>
-		/// <returns></returns>
 		public static string GetScreening(
 			this string source,
 			string mask)
@@ -111,12 +98,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="mask"></param>
-		/// <returns></returns>
 		public static string GetScreeningW(
 			this string source,
 			string mask)
@@ -126,12 +107,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="mask"></param>
-		/// <returns></returns>
 		public static string GetReScreening(
 			this string source,
 			string mask)
@@ -144,9 +119,6 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Возвращает левую часть сторки до символа 'find'
 		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="find"></param>
-		/// <returns></returns>
 		public static string GetLeft(
 			this string source,
 			char find)
@@ -163,9 +135,6 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Возвращает левую часть сторки до подстроки 'find'
 		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="find"></param>
-		/// <returns></returns>
 		public static string GetLeft(
 			this string source,
 			string find)
@@ -182,9 +151,6 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Возвращает левую часть сторки из 'count' символов
 		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="count"></param>
-		/// <returns></returns>
 		public static string GetLeft(
 			this string source,
 			int count)
@@ -201,9 +167,6 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Возвращает правую часть сторки до символа 'find'
 		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="find"></param>
-		/// <returns></returns>
 		public static string GetRight(
 			this string source,
 			char find)
@@ -220,9 +183,6 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Возвращает правую часть сторки до подстроки 'find'
 		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="find"></param>
-		/// <returns></returns>
 		public static string GetRight(
 			this string source,
 			string find)
@@ -239,9 +199,6 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Возвращает правую часть сторки из 'count' символов
 		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="count"></param>
-		/// <returns></returns>
 		public static string GetRight(
 			this string source,
 			int count)
@@ -258,10 +215,6 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Возвращает левую часть сторки до символа 'find'
 		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="find"></param>
-		/// <param name="skip"></param>
-		/// <returns></returns>
 		public static string GetBackTo(
 			this string source,
 			char find,
@@ -287,12 +240,6 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Возвращает подстроку с подстановкой по обрезанным краям
 		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="startIndex"></param>
-		/// <param name="length"></param>
-		/// <param name="beginCropMask"></param>
-		/// <param name="endCropMask"></param>
-		/// <returns></returns>
 		public static string GetCrop(
 			this string source,
 			int startIndex,
@@ -319,8 +266,6 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Возвращает результат преобразования символов с кодом меньше 33 в '_' и больше 126 в их кодовый эквивалент
 		/// </summary>
-		/// <param name="source"></param>
-		/// <returns></returns>
 		public static string GetSafeText(
 			this string source)
 		{
@@ -333,11 +278,6 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Возвращает из строки подстроку находящуюся между 'before' и 'after'
 		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="before"></param>
-		/// <param name="after"></param>
-		/// <param name="comparisonType"></param>
-		/// <returns></returns>
 		public static string GetTag(
 			this string source,
 			string before,
@@ -363,11 +303,6 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Вырезает и возвращает из строки подстроку находящуюся между 'before' и 'after'
 		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="before"></param>
-		/// <param name="after"></param>
-		/// <param name="comparisonType"></param>
-		/// <returns></returns>
 		public static string GetTagAndCut(
 			this string source,
 			string before,
@@ -396,10 +331,6 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Производит рекурсивную замену 'oldString' на 'newString'
 		/// </summary>
-		/// <param name="source"></param>
-		/// <param name="oldText"></param>
-		/// <param name="newText"></param>
-		/// <returns></returns>
 		public static string GetReplaceRecursively(
 			this string source,
 			string oldText,
@@ -411,11 +342,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="source"></param>
-		/// <returns></returns>
 		public static string GetReplaceSpecChars(
 			this string source)
 		{
@@ -423,6 +349,9 @@ namespace Ans.Net6.Common
 			sb.ReplaceSpecChars();
 			return sb.ToString();
 		}
+
+
+
 
 
 

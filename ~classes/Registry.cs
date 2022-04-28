@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections;
 using System.Resources;
 
 namespace Ans.Net6.Common
@@ -164,7 +161,7 @@ namespace Ans.Net6.Common
 			string emptyValue = null)
 		{
 			var item = new RegistryItem(
-				emptyValue ?? string.Empty,				
+				emptyValue ?? string.Empty,
 				_Res.Text_NullItem);
 			this.Insert(0, item);
 			OnAddedItem(new RegistryItemEventArgs(item));
@@ -389,7 +386,7 @@ namespace Ans.Net6.Common
 		/// Возвращает предложение по элементу ввода
 		/// для отображение реестра
 		/// </summary>
-		public RegistryControlsEnum GetProposeControl(
+		public static RegistryControlsEnum GetProposeControl(
 			int count,
 			int width)
 		{
@@ -407,7 +404,7 @@ namespace Ans.Net6.Common
 		/// </summary>
 		public RegistryControlsEnum GetProposeControl()
 		{
-			return this.GetProposeControl(
+			return GetProposeControl(
 				this.Count, this.GetMaxWidth());
 		}
 
@@ -416,7 +413,7 @@ namespace Ans.Net6.Common
 		/// Возвращает предожение по ширине элемента ввода
 		/// для отображение реестра
 		/// </summary>
-		public WidthsEnum GetProposeWidth(
+		public static WidthsEnum GetProposeWidth(
 			int width)
 		{
 			if (width < 11)

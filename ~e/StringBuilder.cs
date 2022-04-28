@@ -3,17 +3,27 @@
 namespace Ans.Net6.Common
 {
 
+	// int IndexOf(this StringBuilder sb, string value, int startIndex, bool ignoreCase)
+	// void InsertFormat(this StringBuilder sb, int index, string template, params string[] args)
+	// void InsertIf(this StringBuilder sb, bool expression, int index, string template, params string[] args)
+	// void InsertIfFormat(this StringBuilder sb, bool expression, int index, string template, params string[] args)
+	// void AppendIf(this StringBuilder sb, bool expression, string value)
+	// void AppendIfFormat(this StringBuilder sb, bool expression, string template, params string[] args)
+	// void Trim(this StringBuilder sb)
+	// void Trim(this StringBuilder sb, char[] chars)
+	// void ReplaceRecursively(this StringBuilder sb, string oldText, string newText)
+	// void ReplaceSpecChars(this StringBuilder sb)
+	// StringBuilder GetTransformToLower(this StringBuilder sb)
+	// StringBuilder GetTransformToUpper(this StringBuilder sb)
+	// StringBuilder GetTransformToStartWithACapital(this StringBuilder sb)
+	// StringBuilder GetTransformToSafeText(this StringBuilder sb)
+
 	public static partial class _e
 	{
 
 		/// <summary>
 		/// Возвращает индекс начала вхождения строки
 		/// </summary>
-		/// <param name="sb"></param>
-		/// <param name="value"></param>
-		/// <param name="startIndex"></param>
-		/// <param name="ignoreCase"></param>
-		/// <returns></returns>
 		public static int IndexOf(
 			this StringBuilder sb,
 			string value,
@@ -40,13 +50,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sb"></param>
-		/// <param name="index"></param>
-		/// <param name="template"></param>
-		/// <param name="args"></param>
 		public static void InsertFormat(
 			this StringBuilder sb,
 			int index,
@@ -57,14 +60,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sb"></param>
-		/// <param name="expression"></param>
-		/// <param name="index"></param>
-		/// <param name="template"></param>
-		/// <param name="args"></param>
 		public static void InsertIf(
 			this StringBuilder sb,
 			bool expression,
@@ -77,14 +72,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sb"></param>
-		/// <param name="expression"></param>
-		/// <param name="index"></param>
-		/// <param name="template"></param>
-		/// <param name="args"></param>
 		public static void InsertIfFormat(
 			this StringBuilder sb,
 			bool expression,
@@ -97,12 +84,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sb"></param>
-		/// <param name="expression"></param>
-		/// <param name="value"></param>
 		public static void AppendIf(
 			this StringBuilder sb,
 			bool expression,
@@ -113,13 +94,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sb"></param>
-		/// <param name="expression"></param>
-		/// <param name="template"></param>
-		/// <param name="args"></param>
 		public static void AppendIfFormat(
 			this StringBuilder sb,
 			bool expression,
@@ -131,10 +105,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sb"></param>
 		public static void Trim(
 			this StringBuilder sb)
 		{
@@ -164,11 +134,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sb"></param>
-		/// <param name="chars"></param>
 		public static void Trim(
 			this StringBuilder sb,
 			char[] chars)
@@ -199,12 +164,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// Производит рекурсивную замену oldText на newText
-		/// </summary>
-		/// <param name="sb"></param>
-		/// <param name="oldText"></param>
-		/// <param name="newText"></param>
 		public static void ReplaceRecursively(
 			this StringBuilder sb,
 			string oldText,
@@ -219,10 +178,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sb"></param>
 		public static void ReplaceSpecChars(
 			this StringBuilder sb)
 		{
@@ -232,11 +187,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sb"></param>
-		/// <returns></returns>
 		public static StringBuilder GetTransformToLower(
 			this StringBuilder sb)
 		{
@@ -245,11 +195,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sb"></param>
-		/// <returns></returns>
 		public static StringBuilder GetTransformToUpper(
 			this StringBuilder sb)
 		{
@@ -258,11 +203,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sb"></param>
-		/// <returns></returns>
 		public static StringBuilder GetTransformToStartWithACapital(
 			this StringBuilder sb)
 		{
@@ -274,8 +214,6 @@ namespace Ans.Net6.Common
 		/// <summary>
 		/// Возвращает результат преобразования символов с кодом меньше 33 в '_' и больше 126 в их кодовый эквивалент
 		/// </summary>
-		/// <param name="sb"></param>
-		/// <returns></returns>
 		public static StringBuilder GetTransformToSafeText(
 			this StringBuilder sb)
 		{

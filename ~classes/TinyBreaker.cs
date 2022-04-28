@@ -20,13 +20,10 @@
 
 		public bool Next()
 		{
-			Current++;
-			if (Current == Step)
-			{
-				Current = 0;
-				return true;
-			}
-			return false;
+			if (Current++ != Step)
+				return false;
+			Current = 0;
+			return true;
 		}
 	}
 

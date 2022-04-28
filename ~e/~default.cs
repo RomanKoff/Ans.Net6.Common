@@ -1,29 +1,30 @@
 ﻿namespace Ans.Net6.Common
 {
 
-    // void DefaultFor(this string value, ref string target)
+	// string DefaultFor(this string target, string defaultValue)
+	// void DefaultFor(this string value, ref string target)
 
-    public static partial class _e
-    {
+	public static partial class _e
+	{
 
-        public static string DefaultFor(
-            this string target,
-            string defaultValue)
-        {
-            return (string.IsNullOrEmpty(target))
-                ? defaultValue
-                : target;
-        }
+		public static string DefaultFor(
+			this string target,
+			string defaultValue)
+		{
+			return (string.IsNullOrEmpty(target))
+				? defaultValue
+				: target;
+		}
 
 
-        public static void DefaultFor(
-            this string value,
-            ref string target)
-        {
-            if (string.IsNullOrEmpty(target))
-                target = value;
-        }
+		public static void DefaultFor(
+			this string value,
+			ref string target)
+		{
+			if (string.IsNullOrEmpty(target))
+				target = value;
+		}
 
-    }
+	}
 
 }

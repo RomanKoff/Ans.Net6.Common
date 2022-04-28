@@ -324,11 +324,12 @@ namespace Ans.Net6.Common
 			string itemTemplate,
 			string itemsSeparator)
 		{
-			return list.SplitItems().MakeFromCollection(
-				x => x,
-				resultTemplate,
-				itemTemplate,
-				itemsSeparator);
+			return list.Split(_Const.SPLIT_ITEMS)
+				.MakeFromCollection(
+					x => x,
+					resultTemplate,
+					itemTemplate,
+					itemsSeparator);
 		}
 
 
@@ -382,6 +383,9 @@ namespace Ans.Net6.Common
 		public static string Make_SizeOfKB(
 			this int size)
 			=> ((long)size).Make_SizeOfKB();
+
+
+
 
 
 		//public static string MakeFromRegistry(

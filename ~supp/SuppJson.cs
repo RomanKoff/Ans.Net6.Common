@@ -4,8 +4,14 @@ using System.Text;
 namespace Ans.Net6.Common
 {
 
-	/// <summary>
-	/// </summary>
+	// string GetDebugJsonHtml(object obj)
+	// string GetJsonStringFromObject(object obj, JsonSerializerSettings settings = null)
+	// T GetObjectFromJson<T>(string json)
+	// T GetObjectFromJson<T>(Stream stream)
+	// T GetObjectFromJsonFile<T>(string filename)
+	// void WriteObjectToStream(object obj, Stream stream)
+	// void SaveObjectToJsonFile(object obj, string filename)
+
 	public static class SuppJson
 	{
 
@@ -19,7 +25,7 @@ namespace Ans.Net6.Common
 			string s1 = GetJsonStringFromObject(obj);
 			sb.AppendLine($"<h3>{obj.GetType().FullName}</h3>");
 			sb.AppendLine("<pre><code class=\"language-html line-numbers\">");
-			sb.AppendLine(SuppHtml.GetEscapeHtml(s1));
+			sb.AppendLine(SuppHtml.EscapeHtml(s1));
 			sb.AppendLine("</code></pre>");
 			return sb.ToString();
 		}
@@ -57,10 +63,10 @@ namespace Ans.Net6.Common
 		public static T GetObjectFromJson<T>(
 			Stream stream)
 		{
-			using var sr1 = new StreamReader(stream);
-			using var jsonr1 = new JsonTextReader(sr1);
+			using var r1 = new StreamReader(stream);
+			using var r2 = new JsonTextReader(r1);
 			var js1 = new JsonSerializer();
-			return js1.Deserialize<T>(jsonr1);
+			return js1.Deserialize<T>(r2);
 		}
 
 

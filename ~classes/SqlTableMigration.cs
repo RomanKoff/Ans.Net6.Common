@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Text;
 
 namespace Ans.Net6.Common
@@ -72,7 +71,7 @@ namespace Ans.Net6.Common
 		}
 
 
-		public string GetValue(
+		public static string GetValue(
 			SqlFieldTypesEnum type,
 			object value)
 		{

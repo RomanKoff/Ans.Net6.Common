@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Ans.Net6.Common
+﻿namespace Ans.Net6.Common
 {
 
 	public enum SqlFieldTypesEnum

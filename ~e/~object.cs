@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace Ans.Net6.Common
+﻿namespace Ans.Net6.Common
 {
 
 	// T[] Insert&lt;T>(this T[] items, int index, T item)
@@ -16,9 +13,6 @@ namespace Ans.Net6.Common
 	public static partial class _e
 	{
 
-		/// <summary>
-		/// Добавляет элемент в массив
-		/// </summary>
 		public static T[] Insert<T>(
 			this T[] items,
 			int index,
@@ -33,9 +27,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// Удаляет элемент из массива
-		/// </summary>
 		public static T[] RemoveAt<T>(
 			this T[] items,
 			int index)
@@ -46,10 +37,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// Если объект установлен, возвращает объект,
-		/// иначе значение объекта по умолчанию
-		/// </summary>
 		public static T DefaultObject<T>(
 			this object value,
 			T defaultValue)
@@ -60,10 +47,6 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// Если объект установлен, возвращает объект, 
-		/// иначе значение объекта по умолчанию
-		/// </summary>
 		public static T DefaultObject<T>(
 			this object value)
 		{

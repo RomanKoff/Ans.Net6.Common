@@ -1,16 +1,20 @@
 ﻿namespace Ans.Net6.Common
 {
 
+	// bool IsEqual(this DateTime datetime1, DateTime datetime2, int minutesDiff)
+	// bool HasTime(this DateTime datetime)
+	// DateTime GetDateOnly(this DateTime datetime)
+	// string GetSafeDate(this DateTime datetime)
+	// string GetSafeDateTime(this DateTime datetime)
+	// string GetSafeDateTimeForFile(this DateTime datetime)
+	// string GetSafeDateTimeForMin(this DateTime datetime)
+
 	public static partial class _e
 	{
 
 		/// <summary>
 		/// Сравнивает значения даты и времени с точностью minutesDiff
 		/// </summary>
-		/// <param name="datetime1"></param>
-		/// <param name="datetime2"></param>
-		/// <param name="minutesDiff"></param>
-		/// <returns></returns>
 		public static bool IsEqual(
 			this DateTime datetime1,
 			DateTime datetime2,
@@ -23,8 +27,6 @@
 		/// <summary>
 		/// Определяет наличие данных о времени
 		/// </summary>
-		/// <param name="datetime"></param>
-		/// <returns></returns>
 		public static bool HasTime(
 			this DateTime datetime)
 		{
@@ -32,11 +34,6 @@
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="datetime"></param>
-		/// <returns></returns>
 		public static DateTime GetDateOnly(
 			this DateTime datetime)
 		{
@@ -45,10 +42,9 @@
 
 
 		/// <summary>
-		/// Возвращает значение даты в виде строки в безопасном формате (yyyy-0MM-dd)
+		/// Возвращает значение даты в виде строки в безопасном формате
+		/// (yyyy-0MM-dd)
 		/// </summary>
-		/// <param name="datetime"></param>
-		/// <returns></returns>
 		public static string GetSafeDate(
 			this DateTime datetime)
 		{
@@ -58,10 +54,9 @@
 
 
 		/// <summary>
-		/// Возвращает значение даты и времени в виде строки в безопасном формате (yyyy-0MM-dd HH:mmmm:ss)
+		/// Возвращает значение даты и времени в виде строки в безопасном формате
+		/// (yyyy-0MM-dd HH:mmmm:ss)
 		/// </summary>
-		/// <param name="datetime"></param>
-		/// <returns></returns>
 		public static string GetSafeDateTime(
 			this DateTime datetime)
 		{
@@ -71,10 +66,9 @@
 
 
 		/// <summary>
-		/// Возвращает значение даты и времени в виде строки в безопасном формате (yyyy-0MM-dd_HH:mmmm:ss) для именования файлов
+		/// Возвращает значение даты и времени в виде строки в безопасном формате
+		/// (yyyy-0MM-dd_HH:mmmm:ss) для именования файлов
 		/// </summary>
-		/// <param name="datetime"></param>
-		/// <returns></returns>
 		public static string GetSafeDateTimeForFile(
 			this DateTime datetime)
 		{
@@ -84,10 +78,9 @@
 
 
 		/// <summary>
-		/// Возвращает значение даты и времени в виде строки в безопасном формате (yyyy0MMddHHmmmmss) минимальной длины
+		/// Возвращает значение даты и времени в виде строки в безопасном формате
+		/// (yyyy0MMddHHmmmmss) минимальной длины
 		/// </summary>
-		/// <param name="datetime"></param>
-		/// <returns></returns>
 		public static string GetSafeDateTimeForMin(
 			this DateTime datetime)
 		{

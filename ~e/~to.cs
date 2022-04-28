@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Ans.Net6.Common
+﻿namespace Ans.Net6.Common
 {
 
 	// IEnumerable<IEnumerable<T>> ToGrid<T>(this IEnumerable<T> source, int count)
@@ -55,7 +51,7 @@ namespace Ans.Net6.Common
 		{
 			if (string.IsNullOrEmpty(source))
 				return null;
-			return source.SplitItems().ToIntArray();
+			return source.Split(_Const.SPLIT_ITEMS).ToIntArray();
 		}
 
 

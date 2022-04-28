@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 
 namespace Ans.Net6.Common
 {
@@ -11,12 +8,7 @@ namespace Ans.Net6.Common
 	// string[] SplitExt(this string source, string separator)
 	// string[] SplitExt(this string source, int count, string separator)
 	// string[] SplitExtW(this string source, string separator)
-	// string[] SplitExtW(this string source, int count, string separator)
-	// string[] SplitItems(this string source)
-	// string[] SplitVLine(this string source)
-	// string[] SplitLn(this string source)
-	// string[] SplitParams(this string source)
-	// string[] SplitData(this string source, int count)
+	// string[] SplitExtW(this string source, int count, string separator)	
 
 	public static partial class _e
 	{
@@ -38,8 +30,7 @@ namespace Ans.Net6.Common
 
 
 		/// <summary>
-		/// Возвращает строковый массив, содержащий подстроки данной строки,
-		/// разделенные сепаратором. Сепаратор экранируется '\'
+		/// Возвращает строковый массив, содержащий подстроки данной строки, разделенные сепаратором. Сепаратор экранируется '\'
 		/// </summary>
 		public static string[] SplitExt(
 			this string source,
@@ -53,9 +44,7 @@ namespace Ans.Net6.Common
 
 
 		/// <summary>
-		/// Возвращает строковый массив размерностью 'upperIndex'
-		/// содержащий подстроки исходной строки,
-		/// разделенные сепаратором. Сепаратор экранируется '\'
+		/// Возвращает строковый массив размерностью 'upperIndex' содержащий подстроки исходной строки, разделенные сепаратором. Сепаратор экранируется '\'
 		/// </summary>
 		public static string[] SplitExt(
 			this string source,
@@ -68,8 +57,7 @@ namespace Ans.Net6.Common
 
 
 		/// <summary>
-		/// Возвращает строковый массив, содержащий подстроки данной строки,
-		/// разделенные сепаратором. Сепаратор экранируется дублированием
+		/// Возвращает строковый массив, содержащий подстроки данной строки, разделенные сепаратором. Сепаратор экранируется дублированием
 		/// </summary>
 		public static string[] SplitExtW(
 			this string source,
@@ -83,9 +71,7 @@ namespace Ans.Net6.Common
 
 
 		/// <summary>
-		/// Возвращает строковый массив размерностью 'upperIndex'
-		/// содержащий подстроки исходной строки,
-		/// разделенные сепаратором. Сепаратор экранируется дублированием
+		/// Возвращает строковый массив размерностью 'upperIndex' содержащий подстроки исходной строки, разделенные сепаратором. Сепаратор экранируется дублированием
 		/// </summary>
 		public static string[] SplitExtW(
 			this string source,
@@ -94,75 +80,6 @@ namespace Ans.Net6.Common
 		{
 			return _split(
 				source.GetScreeningW(separator), count, separator);
-		}
-
-
-		/// <summary>
-		/// Возвращает строковый массив, содержащий подстроки данной строки,
-		/// разделенные сепаратором "," или ";"
-		/// </summary>
-		public static string[] SplitItems(
-			this string source)
-		{
-			if (string.IsNullOrEmpty(source))
-				return null;
-			return source.Split(_Const.SPLIT_ITEMS);
-		}
-
-
-		/// <summary>
-		/// Возвращает строковый массив, содержащий подстроки данной строки,
-		/// разделенные сепаратором |
-		/// </summary>
-		public static string[] SplitVLine(
-			this string source)
-		{
-			if (string.IsNullOrEmpty(source))
-				return null;
-			return source.Split(_Const.SPLIT_VLINE);
-		}
-
-
-		/// <summary>
-		/// Возвращает строковый массив, содержащий подстроки данной строки,
-		/// разделенные переводом строки (10)
-		/// </summary>
-		public static string[] SplitLn(
-			this string source)
-		{
-			if (string.IsNullOrEmpty(source))
-				return null;
-			var a1 = source.Split(
-				_Const.SPLIT_LN, StringSplitOptions.None);
-			return a1.Select(x => x.Trim()).ToArray();
-		}
-
-
-		/// <summary>
-		/// Возвращает строковый массив, содержащий подстроки данной строки,
-		/// разделенные сепаратором "|" или "="
-		/// </summary>
-		public static string[] SplitParams(
-			this string source)
-		{
-			if (string.IsNullOrEmpty(source))
-				return null;
-			var a1 = source.Split(
-				_Const.SPLIT_PARAMS, StringSplitOptions.None);
-			return a1.Select(x => x.Trim()).ToArray();
-		}
-
-
-		/// <summary>
-		/// Возвращает строковый массив размерностью itemCount,
-		/// содержащий подстроки данной строки,
-		/// разделенные сепаратором " | "
-		/// </summary>
-		public static string[] SplitData(
-			this string source,
-			int count)
-		{
-			return source.SplitExt(count, " | ");
 		}
 
 
@@ -209,6 +126,74 @@ namespace Ans.Net6.Common
 			a1[count - 1] += sb.ToString();
 			return a1;
 		}
+
+
+
+
+
+		///// <summary>
+		///// Возвращает строковый массив, содержащий подстроки данной строки,
+		///// разделенные сепаратором "," или ";"
+		///// </summary>
+		//public static string[] SplitItems(
+		//	this string source)
+		//{
+		//	if (string.IsNullOrEmpty(source))
+		//		return null;
+		//	return source.Split(_Const.SPLIT_ITEMS);
+		//}
+
+		///// <summary>
+		///// Возвращает строковый массив, содержащий подстроки данной строки,
+		///// разделенные сепаратором |
+		///// </summary>
+		//public static string[] SplitVLine(
+		//	this string source)
+		//{
+		//	if (string.IsNullOrEmpty(source))
+		//		return null;
+		//	return source.Split(_Const.SPLIT_VLINE);
+		//}
+
+		///// <summary>
+		///// Возвращает строковый массив, содержащий подстроки данной строки,
+		///// разделенные переводом строки (10)
+		///// </summary>
+		//public static string[] SplitLn(
+		//	this string source)
+		//{
+		//	if (string.IsNullOrEmpty(source))
+		//		return null;
+		//	var a1 = source.Split(
+		//		_Const.SPLIT_LN, StringSplitOptions.None);
+		//	return a1.Select(x => x.Trim()).ToArray();
+		//}
+
+		///// <summary>
+		///// Возвращает строковый массив, содержащий подстроки данной строки,
+		///// разделенные сепаратором "|" или "="
+		///// </summary>
+		//public static string[] SplitParams(
+		//	this string source)
+		//{
+		//	if (string.IsNullOrEmpty(source))
+		//		return null;
+		//	var a1 = source.Split(
+		//		_Const.SPLIT_PARAMS, StringSplitOptions.None);
+		//	return a1.Select(x => x.Trim()).ToArray();
+		//}
+
+		///// <summary>
+		///// Возвращает строковый массив размерностью itemCount,
+		///// содержащий подстроки данной строки,
+		///// разделенные сепаратором " | "
+		///// </summary>
+		//public static string[] SplitData(
+		//	this string source,
+		//	int count)
+		//{
+		//	return source.SplitExt(count, " | ");
+		//}
 
 	}
 

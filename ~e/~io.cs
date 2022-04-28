@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-
-namespace Ans.Net6.Common
+﻿namespace Ans.Net6.Common
 {
 
 	// IEnumerable<FileInfo> GetFilesByExtensions(this DirectoryInfo directoryInfo, params string[] extensions)
 	// IEnumerable<FileInfo> GetFilesByExtensions(this DirectoryInfo directoryInfo, string extensions)
+	// void MoveToSmart(this FileInfo fileInfo, string destFileName)
 
 	public static partial class _e
 	{
@@ -39,7 +35,7 @@ namespace Ans.Net6.Common
 		{
 			if (File.Exists(destFileName))
 			{
-
+				// to do check compare files and others
 			}
 			else
 			{

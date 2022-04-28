@@ -3,6 +3,20 @@
 namespace Ans.Net6.Common
 {
 
+	// void FixTextLine(this StringBuilder sb)
+	// void FixTextBox(this StringBuilder sb)
+	// void FixHtml(this StringBuilder sb)
+	// void FixHtmlLine(this StringBuilder sb)
+	// void FixHtmlBox(this StringBuilder sb)
+	// string GetFixTextLine(this string source)
+	// string GetFixTextBox(this string source)
+	// string GetFixHtml(this string source)
+	// string GetFixHtmlLine(this string source)
+	// string GetFixHtmlBox(this string source)
+	// string GetFixString(this string source)
+	// string GetFixStringLo(this string source)
+	// string GetFixStringName(this string source)
+
 	public static partial class _e
 	{
 
@@ -137,6 +151,9 @@ namespace Ans.Net6.Common
 		}
 
 
+
+
+
 		//public static void Typography(
 		//	this StringBuilder sb)
 		//{
@@ -154,7 +171,6 @@ namespace Ans.Net6.Common
 		//		.Replace(" …", "…");
 		//}
 
-
 		//public static string TypographLine(
 		//	this string source)
 		//{
@@ -163,7 +179,6 @@ namespace Ans.Net6.Common
 		//	var sb = new StringBuilder(source);
 		//	return FixString(sb.ToString());
 		//}
-
 
 		//public static string TypographBox(
 		//	string source)

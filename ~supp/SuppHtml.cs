@@ -1,20 +1,17 @@
 ﻿using System.Text;
+using System.Xml.Linq;
 
 namespace Ans.Net6.Common
 {
 
-	/// <summary>
-	/// 
-	/// </summary>
+	// string EscapeHtml(string source)
+	// string MakeIndents(string source)
+	// void ReplaceMacros(StringBuilder sb)
+
 	public static class SuppHtml
 	{
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="source"></param>
-		/// <returns></returns>
-		public static string GetEscapeHtml(
+		public static string EscapeHtml(
 			string source)
 		{
 			return source
@@ -24,11 +21,15 @@ namespace Ans.Net6.Common
 		}
 
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sb"></param>
-		public static void ReplaceHtmlMacros(
+		public static string MakeIndents(
+			string source)
+		{
+			var x1 = XDocument.Parse(source);
+			return x1.ToString(SaveOptions.OmitDuplicateNamespaces);
+		}
+
+
+		public static void ReplaceMacros(
 			StringBuilder sb)
 		{
 			_ = sb

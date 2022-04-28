@@ -9,7 +9,7 @@ namespace Ans.Net6.Common
 	// string GetTranslitRuToEn(this string source)
 	// string GetFixUmlautRu(this string source)
 	// string GetFixNumberRu(this string source)
-	
+
 	public static partial class _e
 	{
 

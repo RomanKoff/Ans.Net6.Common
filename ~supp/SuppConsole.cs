@@ -1,33 +1,31 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 
 namespace Ans.Net6.Common
 {
 
-	/// <summary>
-	/// int Left
-	/// int Top
-	/// int Counter
-	/// ConsoleKeyInfo ReadKey()
-	/// void InputClear()
-	/// void SetCounter(int counter)
-	/// void CounterUp()
-	/// void CounterDown()
-	/// void SavePos()
-	/// void RestopePos()
-	/// void WriteFreeze(string template, params object[] args)
-	/// void Write(ConsoleColor fgColor, string value)
-	/// void Write(ConsoleColor fgColor, bool value)
-	/// void Write(bool expression, ConsoleColor fgColor, string value)
-	/// void Write(bool expression, ConsoleColor fgColor, bool value)
-	/// void Start(string title)
-	/// void Start()
-	/// void SectionStart(string title)
-	/// void SectionEnd(string title = null)
-	/// void End()
-	/// void BreakLineW()
-	/// void BreakLine()
-	/// </summary>
+	// int Left { get; set; }
+	// int Top { get; set; }
+	// int Counter { get; set; }
+	// ConsoleKeyInfo ReadKey()
+	// void InputClear()
+	// void SetCounter(int counter)
+	// void CounterUp()
+	// void CounterDown()
+	// void SavePos()
+	// void RestopePos()
+	// void WriteFreeze(string template, params object[] args)
+	// void Write(ConsoleColor fgColor, string value)
+	// void Write(ConsoleColor fgColor, bool value)
+	// void Write(bool expression, ConsoleColor fgColor, string value)
+	// void Write(bool expression, ConsoleColor fgColor, bool value)
+	// void Start(string title)
+	// void Start()
+	// void SectionStart(string title)
+	// void SectionEnd(string title = null)
+	// void End()
+	// void BreakLineW()
+	// void BreakLine()
+
 	public static class SuppConsole
 	{
 

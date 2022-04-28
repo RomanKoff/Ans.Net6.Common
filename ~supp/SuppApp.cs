@@ -3,12 +3,14 @@
 namespace Ans.Net6.Common
 {
 
-	/// <summary>
-	/// string GetVersion()
-	/// </summary>
+	// string GetVersion()
+
 	public static class SuppApp
 	{
 
+		/// <summary>
+		/// Возвращает версию сборки
+		/// </summary>
 		public static string GetVersion()
 		{
 			return Assembly.GetEntryAssembly().GetName().Version.ToString();

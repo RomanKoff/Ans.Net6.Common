@@ -3,9 +3,6 @@
 namespace Ans.Net6.Common.Json
 {
 
-	/// <summary>
-	/// 
-	/// </summary>
 	public class BoolConverter
 		: JsonConverter
 	{
@@ -35,9 +32,6 @@ namespace Ans.Net6.Common.Json
 
 
 
-	/// <summary>
-	/// 
-	/// </summary>
 	public class DateTimeConverter
 		: JsonConverter
 	{
@@ -72,9 +66,6 @@ namespace Ans.Net6.Common.Json
 
 
 
-	/// <summary>
-	/// 
-	/// </summary>
 	public class DateLiteConverter
 		: JsonConverter
 	{
@@ -105,9 +96,6 @@ namespace Ans.Net6.Common.Json
 
 
 
-	/// <summary>
-	/// 
-	/// </summary>
 	public enum Sample1Enum
 	{
 		TextValueDefault,
@@ -115,9 +103,9 @@ namespace Ans.Net6.Common.Json
 		TextValue2,
 		TextValue3
 	}
-	/// <summary>
-	/// 
-	/// </summary>
+	
+	
+	
 	public class Sample1EnumConverter
 		: JsonConverter
 	{
@@ -156,9 +144,6 @@ namespace Ans.Net6.Common.Json
 
 
 
-	/// <summary>
-	/// 
-	/// </summary>
 	public enum Sample2Enum
 	{
 		IntValueDefault,
@@ -166,9 +151,9 @@ namespace Ans.Net6.Common.Json
 		IntValue2,
 		IntValue3
 	}
-	/// <summary>
-	/// 
-	/// </summary>
+	
+	
+	
 	public class Sample2EnumConverter
 		: JsonConverter
 	{

@@ -3,14 +3,14 @@
 namespace Ans.Net6.Common
 {
 
+	// string ParamEncode(string source)
+
 	public static class SuppRegex
 	{
 
 		/// <summary>
 		/// Кодировка спецсимволов для regex-выражений
 		/// </summary>
-		/// <param name="source"></param>
-		/// <returns></returns>
 		public static string ParamEncode(
 			string source)
 		{

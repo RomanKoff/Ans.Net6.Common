@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Ans.Net6.Common
+﻿namespace Ans.Net6.Common
 {
 
 	public class MailMessage

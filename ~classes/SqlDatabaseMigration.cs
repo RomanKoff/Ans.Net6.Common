@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Text;
 
 namespace Ans.Net6.Common
@@ -7,14 +6,12 @@ namespace Ans.Net6.Common
 
 	public class SqlDatabaseMigration
 	{
-
 		public string Servername { get; set; }
 		public string Username { get; set; }
 		public string Password { get; set; }
 		public string SourceDatabaseName { get; set; }
 		public string TargetDatabaseName { get; set; }
 		public List<SqlTableMigration> Tables { get; set; }
-
 
 		public string GetSql()
 		{
@@ -28,7 +25,6 @@ namespace Ans.Net6.Common
 			}
 			return sb.ToString();
 		}
-
 	}
 
 }

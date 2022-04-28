@@ -1,14 +1,14 @@
-﻿using System;
-using System.IO;
-using System.Text;
+﻿using System.Text;
 
 namespace Ans.Net6.Common
 {
 
 	public class TinyLogWriter
 	{
+
 		public string Filename { get; private set; }
 		public int Length { get; set; }
+
 
 		public TinyLogWriter(
 			string filename,
@@ -22,12 +22,14 @@ namespace Ans.Net6.Common
 				SuppIO.FileWrite(Filename, null);
 		}
 
+
 		public void Append(
 			string text)
 		{
-			sb.Append(text);
+			_sb.Append(text);
 			_test();
 		}
+
 
 		public void Append(
 			string template,
@@ -36,12 +38,14 @@ namespace Ans.Net6.Common
 			Append(string.Format(template, args));
 		}
 
+
 		public void AppendLine(
 			string text)
 		{
-			sb.AppendLine(text);
+			_sb.AppendLine(text);
 			_test();
 		}
+
 
 		public void AppendLine(
 			string template,
@@ -49,6 +53,7 @@ namespace Ans.Net6.Common
 		{
 			AppendLine(string.Format(template, args));
 		}
+
 
 		public void AppendLog(
 			string template,
@@ -59,6 +64,7 @@ namespace Ans.Net6.Common
 			Console.Write(s1);
 		}
 
+
 		public void AppendLineLog(
 			string template,
 			params object[] args)
@@ -68,29 +74,33 @@ namespace Ans.Net6.Common
 			Console.WriteLine(s1);
 		}
 
+
 		public void Save()
 		{
-			SuppIO.FileWrite(Filename, sb.ToString(), mode: FileMode.Append);
+			SuppIO.FileWrite(Filename, _sb.ToString(), mode: FileMode.Append);
 			_init();
 		}
 
+
+
 		// privates
 
-		private StringBuilder sb;
-		private int count;
+		private StringBuilder _sb;
+		private int _count;
 
 		private void _init()
 		{
-			sb = new StringBuilder();
-			count = 0;
+			_sb = new StringBuilder();
+			_count = 0;
 		}
 
 		private void _test()
 		{
-			count++;
-			if (count > Length)
+			_count++;
+			if (_count > Length)
 				Save();
 		}
+
 	}
 
 }

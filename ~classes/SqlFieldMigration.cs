@@ -3,12 +3,10 @@
 
 	public class SqlFieldMigration
 	{
-
 		public SqlField OldField { get; private set; }
 		public SqlField NewField { get; private set; }
 		public bool IsSetup { get; private set; }
 		public string Value { get; private set; }
-
 
 		public SqlFieldMigration(
 			string definition)
@@ -27,7 +25,6 @@
 				this.NewField = new SqlField(p2.Value);
 			}
 		}
-
 	}
 
 }

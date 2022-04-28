@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 
 namespace Ans.Net6.Common
 {
@@ -23,7 +20,7 @@ namespace Ans.Net6.Common
 		{
 			this.Sql = new StringBuilder();
 			this.TableName = tableName;
-			this.Fields = definition.SplitItems()
+			this.Fields = definition.Split(_Const.SPLIT_ITEMS)
 				.Select(x => new SqlField(x)).ToList();
 			this.FieldsNames = Fields.MakeFromCollection(x => x.Name, "{0}", "[{0}]", ",");
 		}
@@ -55,7 +52,7 @@ namespace Ans.Net6.Common
 			string fieldsDefinition,
 			object item)
 		{
-			var fields = fieldsDefinition.SplitItems()
+			var fields = fieldsDefinition.Split(_Const.SPLIT_ITEMS)
 				.Select(x => new SqlField(x));
 			AddInsert(fields, item);
 		}
@@ -110,7 +107,7 @@ namespace Ans.Net6.Common
 			object newItem,
 			Func<object, object, bool> differentNew2Old)
 		{
-			var fields = fieldsDefinition.SplitItems()
+			var fields = fieldsDefinition.Split(_Const.SPLIT_ITEMS)
 				.Select(x => new SqlField(x));
 			AddUpdate(keyName, keyValue, fields, oldItem, newItem, differentNew2Old);
 		}

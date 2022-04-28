@@ -19,7 +19,7 @@ namespace Ans.Net6.Common
 		}
 
 
-		public string SendQueryString(
+		public string SendQueryToString(
 			string queryString)
 		{
 			using var client = new HttpClient();
@@ -39,7 +39,7 @@ namespace Ans.Net6.Common
 		public TResponse SendQuery(
 			string queryString)
 		{
-			string json = SendQueryString(queryString);
+			string json = SendQueryToString(queryString);
 			if (string.IsNullOrEmpty(json) || json == "null")
 				return default;
 			return JsonConvert.DeserializeObject<TResponse>(json);

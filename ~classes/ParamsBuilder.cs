@@ -5,12 +5,15 @@ namespace Ans.Net6.Common
 
 	public class ParamsBuilder
 	{
+
 		public ParamsCollection Parameters { get; private set; }
+
 
 		public ParamsBuilder()
 		{
 			this.Parameters = new ParamsCollection();
 		}
+
 
 		public void Add(
 			string name,
@@ -20,6 +23,7 @@ namespace Ans.Net6.Common
 				Parameters.Add(name, value);
 		}
 
+
 		public void Add(
 			string name,
 			bool value)
@@ -27,6 +31,7 @@ namespace Ans.Net6.Common
 			if (value)
 				Parameters.Add(name, "1");
 		}
+
 
 		public void Add(
 			string name,
@@ -36,6 +41,7 @@ namespace Ans.Net6.Common
 				Parameters.Add(name, value.ToString());
 		}
 
+
 		public void Add(
 			string name,
 			long value)
@@ -43,6 +49,7 @@ namespace Ans.Net6.Common
 			if (value != 0)
 				Parameters.Add(name, value.ToString());
 		}
+
 
 		public void Add(
 			string name,
@@ -52,6 +59,7 @@ namespace Ans.Net6.Common
 				Parameters.Add(name, value.ToString());
 		}
 
+
 		public void Add(
 			string name,
 			float value)
@@ -59,6 +67,7 @@ namespace Ans.Net6.Common
 			if (value != 0)
 				Parameters.Add(name, value.ToString());
 		}
+
 
 		public void Add(
 			string name,
@@ -68,6 +77,7 @@ namespace Ans.Net6.Common
 				Parameters.Add(name, value.ToString());
 		}
 
+
 		public void Add(
 			string name,
 			DateTime? value)
@@ -76,10 +86,12 @@ namespace Ans.Net6.Common
 				Parameters.Add(name, value.Value.ToString("u"));
 		}
 
+
 		public override string ToString()
 		{
 			return _toString(Parameters);
 		}
+
 
 		public string ToString(
 			string name,
@@ -92,6 +104,7 @@ namespace Ans.Net6.Common
 			return _toString(a1);
 		}
 
+
 		public string ToString(
 			string name,
 			int value)
@@ -99,9 +112,10 @@ namespace Ans.Net6.Common
 			return ToString(name, value.ToString());
 		}
 
+
 		// privates
 
-		private string _toString(
+		private static string _toString(
 			ParamsCollection items)
 		{
 			if (!items.Any())
@@ -111,6 +125,7 @@ namespace Ans.Net6.Common
 				sb.Append($"&{item.Key}={item.Value}");
 			return $"?{sb.ToString()[1..]}";
 		}
+
 	}
 
 }

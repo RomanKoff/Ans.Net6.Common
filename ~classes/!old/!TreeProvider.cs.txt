@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace Ans.Net6.Common
+﻿namespace Ans.Net6.Common
 {
 
-    public interface ITreeProvider<T>
+	public interface ITreeProvider<T>
     {
         List<T> All { get; set; }
         T Root { get; set; }

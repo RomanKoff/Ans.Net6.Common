@@ -6,9 +6,6 @@ using System.Text;
 namespace Ans.Net6.Common.Services
 {
 
-	/// <summary>
-	/// 
-	/// </summary>
 	public interface IMailerService
 	{
 		Task SendAsync(MailMessage message);
@@ -16,9 +13,6 @@ namespace Ans.Net6.Common.Services
 
 
 
-	/// <summary>
-	/// 
-	/// </summary>
 	public interface IMailerServiceOptions
 	{
 		string DefaultFromAddress { get; set; }
@@ -32,9 +26,6 @@ namespace Ans.Net6.Common.Services
 
 
 
-	/// <summary>
-	/// 
-	/// </summary>
 	public class MailerServiceOptions
 		: IMailerServiceOptions
 	{
@@ -49,9 +40,6 @@ namespace Ans.Net6.Common.Services
 
 
 
-	/// <summary>
-	/// 
-	/// </summary>
 	public class MailerService
 		: IMailerService
 	{
@@ -63,7 +51,7 @@ namespace Ans.Net6.Common.Services
 			this._options = options;
 		}
 
-		public MailboxAddress GetMailboxAddress(
+		public static MailboxAddress GetMailboxAddress(
 			string title,
 			string address)
 		{
@@ -100,7 +88,6 @@ namespace Ans.Net6.Common.Services
 			await client.DisconnectAsync(true);
 		}
 	}
-
 
 
 

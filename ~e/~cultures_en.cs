@@ -2,7 +2,7 @@
 {
 
 	// string GetPluralizeEn(this string word)
-	
+
 	public static partial class _e
 	{
 
@@ -45,6 +45,9 @@
 			}
 			return string.Format("{0}s", word);
 		}
+
+
+
 
 
 		//public static string GetPluralizeEn(

@@ -1,9 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 using System.Text;
 
 namespace Ans.Net6.Common
 {
+
+	// void DeleteObjects<TEntity>(this DbSet<TEntity> set, IEnumerable<TEntity> data) where TEntity : class
+	// void SqlClearTable(this DbContext context, string table)
+	// void SqlIdentityInserts(this DbContext context, string table, string inserts, bool hasIdentity)
+	// void SqlIdentityInserts(this DbContext context, SqlTable table, bool hasIdentity)
 
 	public static partial class _e
 	{
@@ -23,9 +27,7 @@ namespace Ans.Net6.Common
 			string table)
 		{
 			_ = context.Database.ExecuteSqlRaw(
-				string.Format(
-					"DELETE FROM {0};DBCC CHECKIDENT('{0}', RESEED, 0);",
-					table));
+				$"DELETE FROM {table};DBCC CHECKIDENT('{table}', RESEED, 0);");
 			_ = context.SaveChanges();
 		}
 
@@ -61,6 +63,9 @@ namespace Ans.Net6.Common
 		}
 
 
+
+
+
 		//public static void DbccCheckIdent<T>(
 		//    this DbContext context,
 		//    int? reseedTo = null)
@@ -71,7 +76,6 @@ namespace Ans.Net6.Common
 		//        $"DBCC CHECKIDENT('{context.GetTableName<T>()}',RESEED);");
 		//}
 
-
 		//public static string GetTableName<T>(
 		//    this DbContext context)
 		//    where T : class
@@ -79,7 +83,6 @@ namespace Ans.Net6.Common
 		//    var objectContext = ((IObjectContextAdapter)context).ObjectContext;
 		//    return objectContext.GetTableName<T>();
 		//}
-
 
 		//public static string GetTableName<T>(
 		//    this ObjectContext context)
